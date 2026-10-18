@@ -57,6 +57,32 @@
   });
   syncSidebar();
 
+  if (document.body.classList.contains('article-page')) {
+    document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+      location.href = `/?topic=${encodeURIComponent(button.dataset.filter)}#journal`;
+    }));
+    document.querySelectorAll('.year').forEach(year => { year.textContent = new Date().getFullYear(); });
+    const reading = document.querySelector('.article-body');
+    const progress = document.querySelector('.reading-progress');
+    const headings = [...reading.querySelectorAll(':scope > h2[id], :scope > aside[id]')];
+    const links = [...document.querySelectorAll('.article-toc a')];
+    function updateReading() {
+      const start = reading.offsetTop;
+      const distance = Math.max(1, reading.offsetHeight - innerHeight);
+      progress.style.transform = `scaleX(${Math.max(0, Math.min(1, (scrollY - start) / distance))})`;
+      let current = headings[0]?.id;
+      headings.forEach(heading => { if (heading.getBoundingClientRect().top <= 150) current = heading.id; });
+      links.forEach(link => {
+        if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    addEventListener('scroll', updateReading, {passive:true});
+    addEventListener('resize', updateReading);
+    updateReading();
+    return;
+  }
+
   const select = document.querySelector('#category-filter');
   const search = document.querySelector('#search');
   const posts = [...document.querySelectorAll('.post')];
@@ -78,7 +104,7 @@
       chip.setAttribute('aria-pressed', String(active));
     });
     document.querySelector('.empty-state').hidden = count > 0;
-    document.querySelector('#results-status').textContent = `${category}，找到 ${count} 篇規劃中的筆記`;
+    document.querySelector('#results-status').textContent = `${category}，找到 ${count} 篇筆記`;
     document.querySelector('.journal-number').textContent = count ? `01 — ${String(count).padStart(2, '0')}` : '00 — 00';
   }
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {

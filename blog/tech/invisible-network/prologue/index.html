@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="從「去問 Google」到「去問 AI」，探索螢幕背後的機房、設備與連線。你看不見的網路系列序章。">
+  <meta name="color-scheme" content="light dark">
+  <title>你看不見的網路｜序章 — Edson W.</title>
+  <script>
+    (() => {
+      let preference = 'auto';
+      try { preference = localStorage.getItem('edwei-theme') || 'auto'; } catch {}
+      if (!['auto','light','dark'].includes(preference)) preference = 'auto';
+      document.documentElement.dataset.preference = preference;
+      document.documentElement.dataset.theme = preference === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/script.js?v=5" defer></script>
+
+  <link rel="stylesheet" href="/article.css?v=2">
+</head>
+<body class="article-page">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <button class="sidebar-toggle" aria-controls="sidebar" aria-expanded="true" aria-label="收合側邊欄"><span aria-hidden="true">‹</span></button>
+  <aside id="sidebar" class="sidebar" aria-label="網站導覽">
+    <a class="brand" href="/"><span class="brand-name">Edson W<span>.</span></span><span class="brand-caption">探索日常，記錄所見</span></a>
+    <span class="sidebar-label">MY LITTLE CORNER</span>
+    <nav aria-label="主要導覽">
+      <a class="nav-item" href="/"><span aria-hidden="true">⌂</span>首頁<span class="nav-en">Home</span></a>
+      <a class="nav-item" href="/#journal"><span aria-hidden="true">▤</span>所有筆記<span class="count">03</span></a>
+      <details class="category" open><summary><span aria-hidden="true">⌘</span>技術筆記<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/tech/" aria-current="page">全部技術筆記</a><button data-filter="網路基礎">網路與資料中心</button><button data-filter="工具應用">工具與實作</button></div></details>
+      <details class="category"><summary><span aria-hidden="true">♧</span>生活探索<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/travel/">旅行見聞</a><a href="/blog/foodie/">美食散步</a></div></details>
+      <button class="nav-item" data-filter="隨筆"><span aria-hidden="true">✎</span>隨筆<span class="nav-en">Thoughts</span></button>
+      <a class="nav-item" href="/#about"><span aria-hidden="true">☺</span>關於 Edson W.</a>
+    </nav>
+    <section class="sidebar-note"><span class="sidebar-label">ON MY MIND</span><span class="note-mark" aria-hidden="true">✳</span><p>不用急著抵達，<br>沿途也值得記錄。</p><span class="note-caption">a note to myself</span></section>
+    <div class="sidebar-bottom"><a class="github-link" href="https://github.com/EdweiDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><div class="theme-row"><span id="theme-caption">外觀模式</span><div class="theme-switch" role="group" aria-labelledby="theme-caption"><button data-theme-choice="light" aria-label="淺色模式" title="淺色模式" aria-pressed="false">☀</button><button data-theme-choice="auto" aria-label="跟隨系統" title="跟隨系統" aria-pressed="true">◐</button><button data-theme-choice="dark" aria-label="深色模式" title="深色模式" aria-pressed="false">☾</button></div></div><span class="sidebar-copyright">© <span class="year">2026</span> Edson W. · Made with curiosity</span></div>
+  </aside>
+  <button class="sidebar-backdrop" aria-label="關閉導覽選單" hidden></button>
+
+  <div class="reading-progress" aria-hidden="true"></div><main id="main"><div class="article-shell">
+      <div class="article-breadcrumb"><a href="/">首頁</a><span>/</span><a href="/blog/tech/">技術筆記</a><span>/</span><span>序章</span><span>你看不見的網路 · 序章</span></div>
+      <header class="article-header">
+        <div class="article-series"><span class="series-index">00</span><span>你看不見的網路 / 序章</span></div>
+        <h1>從「去問 Google」到「去問 AI」，<br>螢幕背後發生了什麼？</h1>
+        <p class="article-deck">一個對話框、一句提問。讓我們把鏡頭拉遠，看看支撐這場對話的設備與連線。</p>
+        <div class="article-byline"><span class="author-icon" aria-hidden="true">e</span><span>Edson W.</span><span class="byline-divider"></span><span>技術筆記</span><span class="byline-divider"></span><span>系列開場</span></div>
+      </header>
+      <figure class="article-cover">
+        <svg viewBox="0 0 940 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cover-title cover-desc"><title id="cover-title">螢幕背後的網路</title><desc id="cover-desc">概念圖：從使用者螢幕，經過網路，到遠端系統，再將結果傳回。並非實際服務拓樸。</desc><rect class="diagram-bg" width="940" height="280"/><path d="M46 37h848M46 244h848" class="diagram-ink" stroke-width=".6" opacity=".2"/><circle cx="805" cy="58" r="25" class="diagram-warm" opacity=".15"/><text x="47" y="62" class="diagram-muted" font-size="9" letter-spacing="3">THE INVISIBLE NETWORK</text><rect x="80" y="95" width="174" height="102" rx="7" class="diagram-panel"/><rect x="92" y="107" width="150" height="76" rx="3" class="diagram-ink" fill="none" stroke-width="1.5"/><path d="M121 132h75m-75 12h49" class="diagram-ink" stroke-width="2"/><circle cx="216" cy="156" r="7" class="diagram-warm" opacity=".7"/><path d="M166 198v17m-34 0h68" class="diagram-ink" stroke-width="3"/><text x="167" y="237" text-anchor="middle" class="diagram-text" font-size="13">你的螢幕</text><path d="M281 134h93m-6-5 7 5-7 5M374 170h-93m6-5-7 5 7 5M559 134h95m-6-5 7 5-7 5M654 170h-95m6-5-7 5 7 5" class="diagram-ink" stroke-width="1.5" fill="none"/><circle cx="468" cy="151" r="61" class="diagram-panel"/><ellipse cx="468" cy="151" rx="26" ry="61" class="diagram-ink" stroke-width="1" fill="none"/><ellipse cx="468" cy="151" rx="61" ry="23" class="diagram-ink" stroke-width="1" fill="none"/><path d="M407 151h122" class="diagram-ink" stroke-width="1"/><text x="468" y="237" text-anchor="middle" class="diagram-text" font-size="13">網路</text><rect x="688" y="94" width="157" height="118" rx="6" class="diagram-panel"/><g class="diagram-ink" fill="none" stroke-width="1.5"><rect x="704" y="110" width="125" height="24" rx="2"/><rect x="704" y="141" width="125" height="24" rx="2"/><rect x="704" y="172" width="125" height="24" rx="2"/><path d="M716 122h43m-43 31h43m-43 31h43"/></g><g class="diagram-warm"><circle cx="812" cy="122" r="3"/><circle cx="812" cy="153" r="3"/><circle cx="812" cy="184" r="3"/></g><text x="766" y="237" text-anchor="middle" class="diagram-text" font-size="13">遠端系統</text></svg>
+        <figcaption>一問一答的背後，是資料的來回。此圖為概念示意，非實際服務架構。</figcaption>
+      </figure>
+      <div class="reading-layout">
+        <article class="article-body" aria-label="你看不見的網路序章正文">
+          <p class="opening">以前在網路上問問題，常常會得到一句：</p>
+          <div class="chat-lines"><span class="chat-old">「啊你怎麼不去問 Google？」</span></div>
+          <p>現在，這句話慢慢變成：</p>
+          <div class="chat-lines"><span class="chat-new">「去問 AI 啊。」</span></div>
+          <p>從查資料、翻譯、寫程式，到生成圖片、整理報告，AI 已經走進我們的生活。遇到問題，打開對話框，把想法丟進去，等一下，答案就開始一個字、一個字地出現。</p>
+          <p>用起來很自然，自然到我們可能從來沒有想過：</p>
+          <blockquote><p>按下「傳送」之後，我的問題到底跑去哪裡了？</p></blockquote>
+          <h2 id="cloud">AI 的背後，真的有一間機房嗎？</h2>
+          <p>看著手機裡的對話框，很容易覺得 AI 就住在這個 App 裡。</p>
+          <p>有些 AI 確實可以直接在手機或電腦上執行。不過，這個系列先從另一種常見情境開始：你透過網路，使用遠端提供的 AI 服務。</p>
+          <p>這時，手機是你與服務互動的入口。你送出的內容會經過網路，到達遠端系統，由那裡的設備處理，再把結果傳回來。</p>
+          <p>平常我們會用一個很方便的詞，概括這一切：</p>
+          <blockquote><p>「雲端。」</p></blockquote>
+          <p>但把鏡頭拉近，雲端其實有很具體的樣子。</p>
+          <p>裡面有一排排機櫃、持續運轉的伺服器、負責儲存資料的設備，以及把它們連接起來的交換器和線材。這些設備需要供電、散熱，也需要彼此交換資料。</p>
+          <p>螢幕上看起來簡單的一問一答，背後有一整套實體系統在工作。</p>
+          <h2 id="connections">有了 GPU，為什麼還需要那麼多線？</h2>
+          <p>談到 AI 硬體，大家可能最先想到 GPU。</p>
+          <p>不過，要完成工作，光有運算能力還不夠。資料必須送到需要它的地方；當工作由多個運算單元共同處理時，它們也可能需要交換中間結果。</p>
+          <p>可以想像一群人正在合作完成報告。</p>
+          <p>有人找資料，有人計算，有人整理結果。即使每個人都做得很快，資料遲遲送不到下一個人手上，整份報告仍然得等。</p>
+          <p>電腦的合作方式當然更複雜，但這個問題很直覺：</p>
+          <blockquote><p>算得快，也得讓資料跟得上。</p></blockquote>
+          <p>這就帶出了我們接下來要認識的角色：網卡，也就是 NIC；負責轉送資料的交換器；以及承載訊號的各種線材與光模組。</p>
+          <h2 id="ports">可是，我熟悉的網路孔去哪了？</h2>
+          <p>說到網路線，你腦中浮現的，可能是家裡接在路由器或電腦後面的那一條。</p>
+          <p>透明接頭、小小的卡榫，插進去會「喀」一聲。大家通常叫它 RJ45 網路接頭。</p>
+          <p>如果你帶著這個印象去看資料中心，可能會發現：有些連接埠很熟悉，有些卻完全不是那個樣子。</p>
+          <p>有的是插進設備裡的金屬模組，有的接著細細的光纖，也有看起來相當粗的線纜。再看規格，還可能出現 400G、800G 這些數字。</p>
+          <p>等等，800G？</p>
+          <blockquote><p>是這條線重 800 公克嗎？</p></blockquote>
+          <p>先把體重計放下。這裡談的是資料傳輸速率。</p>
+          <p>但為什麼需要這麼快？這些不同外形的接頭，又各自負責什麼？熟悉的 RJ45，是消失了，還是出現在其他位置？</p>
+          <p>這些問題，正是這個系列想一步一步拆開的內容。</p>
+          <h2 id="beginning">一起看看那些平常看不見的地方</h2>
+          <p>我想寫《你看不見的網路》，是因為我們越來越常接觸 AI 的功能，卻比較少有機會看看支撐它的設備，以及資料如何在設備之間移動。</p>
+          <p>這也是我整理自己理解的過程。把一個名詞認出來，和把它清楚解釋給別人聽，中間常常還有一段距離。</p>
+          <p>接下來，我們會從熟悉的網路線出發，逐步認識 NIC、交換器、光模組，以及資料中心裡的高速連線。</p>
+          <p>你不需要先背好所有縮寫。帶著一個問題開始就可以：</p>
+          <blockquote><p>當我在螢幕上按下「傳送」，背後有哪些設備開始忙了起來？</p></blockquote>
+          <p>下一篇，就從那個熟悉的網路孔談起。</p>
+          <aside class="engineer-note" id="engineer-note" aria-labelledby="engineer-title"><span class="eyebrow">A NOTE ON SCOPE</span><h2 id="engineer-title">工程師補充｜這一篇先限定的範圍</h2><p>本文以透過網路存取的雲端 AI 服務為例。實際請求如何被分派、由多少設備處理，會依服務與部署方式而異，並非每次回答都需要多台伺服器共同運算。</p><p>後續也會區分使用者連到服務的網路，以及資料中心內部的設備互連。看到「800G」時，不能直接把它理解成手機到 AI 服務的連線速度。</p></aside>
+          <div class="article-ending"><a href="/blog/tech/">← 返回技術筆記</a><a href="#main">回到文章開頭 ↑</a></div>
+          <section class="next-note"><span class="eyebrow">TO BE CONTINUED</span><h3>下一站，那個熟悉的網路孔。</h3><p>下一篇規劃中。從日常的接頭出發，逐步認識資料中心的連線。</p></section>
+        </article>
+        <nav class="article-toc" aria-label="文章目錄"><h2>IN THIS NOTE / 本文目錄</h2><a href="#cloud">AI 背後的機房</a><a href="#connections">運算以外的連線</a><a href="#ports">熟悉的網路孔去哪了？</a><a href="#beginning">這個系列的起點</a><a href="#engineer-note">工程師補充</a><span class="toc-note">follow your curiosity.</span></nav>
+      </div>
+      <footer><span class="footer-note">技術是探索，生活也是。</span><span>© <span class="year">2026</span> Edson W.</span><a href="/">回到首頁 ↗</a></footer>
+
+</div></main></body></html>
