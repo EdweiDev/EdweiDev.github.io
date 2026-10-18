@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="記下味道，也記下一間店、一條街帶來的感受。食記正在醞釀中。">
+  <meta name="color-scheme" content="light dark">
+  <title>美食散步 — Edsno W. 的觀察筆記</title>
+  <script>
+    (() => {
+      let preference = 'auto';
+      try { preference = localStorage.getItem('edwei-theme') || 'auto'; } catch {}
+      if (!['auto','light','dark'].includes(preference)) preference = 'auto';
+      document.documentElement.dataset.preference = preference;
+      document.documentElement.dataset.theme = preference === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/script.js?v=3" defer></script>
+</head>
+<body data-category="美食">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <button class="sidebar-toggle" aria-controls="sidebar" aria-expanded="true" aria-label="收合側邊欄"><span aria-hidden="true">‹</span></button>
+  <aside id="sidebar" class="sidebar" aria-label="網站導覽">
+    <a class="brand" href="/"><span class="brand-name">Edsno W<span>.</span></span><span class="brand-caption">探索日常，記錄所見</span></a>
+    <span class="sidebar-label">MY LITTLE CORNER</span>
+    <nav aria-label="主要導覽">
+      <a class="nav-item" href="/"><span aria-hidden="true">⌂</span>首頁<span class="nav-en">Home</span></a>
+      <a class="nav-item" href="/#journal"><span aria-hidden="true">▤</span>所有筆記<span class="count">03</span></a>
+      <details class="category"><summary><span aria-hidden="true">⌘</span>技術筆記<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/tech/">全部技術筆記</a><button data-filter="網路基礎">網路與資料中心</button><button data-filter="工具應用">工具與實作</button></div></details>
+      <details class="category" open><summary><span aria-hidden="true">♧</span>生活探索<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/travel/">旅行見聞</a><a href="/blog/foodie/" aria-current="page">美食散步</a></div></details>
+      <button class="nav-item" data-filter="隨筆"><span aria-hidden="true">✎</span>隨筆<span class="nav-en">Thoughts</span></button>
+      <a class="nav-item" href="/#about"><span aria-hidden="true">☺</span>關於 Edsno W.</a>
+    </nav>
+    <section class="sidebar-note"><span class="sidebar-label">ON MY MIND</span><span class="note-mark" aria-hidden="true">✳</span><p>不用急著抵達，<br>沿途也值得記錄。</p><span class="note-caption">a note to myself</span></section>
+    <div class="sidebar-bottom"><a class="github-link" href="https://github.com/EdweiDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><div class="theme-row"><span id="theme-caption">外觀模式</span><div class="theme-switch" role="group" aria-labelledby="theme-caption"><button data-theme-choice="light" aria-label="淺色模式" title="淺色模式" aria-pressed="false">☀</button><button data-theme-choice="auto" aria-label="跟隨系統" title="跟隨系統" aria-pressed="true">◐</button><button data-theme-choice="dark" aria-label="深色模式" title="深色模式" aria-pressed="false">☾</button></div></div><span class="sidebar-copyright">© <span class="year">2026</span> Edsno W. · Made with curiosity</span></div>
+  </aside>
+  <button class="sidebar-backdrop" aria-label="關閉導覽選單" hidden></button>
+
+  <main id="main">
+    <div class="main-inner">
+      <div class="topline"><span>FOOD & EVERYDAY MOMENTS</span><span class="topline-right"><span class="status-dot"></span> 持續探索中</span></div>
+      <section class="hero" aria-labelledby="hero-title"><span class="hero-pill"><span aria-hidden="true">✳</span> Edsno W. 的美食散步</span><h1 id="hero-title">好好吃飯，<br>也是認識<span class="serif-accent">生活</span>的方式。</h1><p>記下味道，也記下一間店、一條街帶來的感受。食記正在醞釀中。</p><a href="#journal" class="hero-link">一起翻翻筆記 <span aria-hidden="true">↓</span></a><span class="hero-scribble" aria-hidden="true">stay curious.</span></section>
+      <section id="journal" aria-labelledby="journal-title">
+        <div class="journal-heading"><div><span class="eyebrow">THE NOTEBOOK</span><h2 id="journal-title" tabindex="-1">美食散步<span>從這裡開始</span></h2></div><span class="journal-number">01 — 01</span></div>
+        <div class="tools"><div class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="search">搜尋筆記</label><input id="search" type="search" placeholder="找找你感興趣的事物…" autocomplete="off"></div><label class="sr-only" for="category-filter">篩選筆記分類</label><select id="category-filter"><option value="全部">美食散步・全部</option></select></div>
+        <div class="category-breadcrumb"><a href="/">首頁</a><span aria-hidden="true">/</span><span>美食散步</span><a href="/#journal">查看所有主題 ↗</a></div>
+        <div class="post-grid">
+          
+          
+          <article class="post" data-categories="美食"><button class="post-open" data-article="food" aria-label="查看規劃：好好吃飯，也是認識生活的方式"><div class="post-image scene-food"><svg viewBox="0 0 420 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#dfc9ad" d="M0 0h420v290H0z"/><path d="M0 0h94v290H0z" fill="#d0b393"/><path d="M94 0h8v290h-8zM0 90h420v5H0z" fill="#b5906b" opacity=".4"/><path d="m261 0 159 88v202H175z" fill="#f4e8cc" opacity=".5"/><ellipse cx="240" cy="194" rx="105" ry="48" fill="#bea182" opacity=".5"/><ellipse cx="231" cy="179" rx="92" ry="40" fill="#ece3cd"/><ellipse cx="231" cy="177" rx="66" ry="27" fill="#d8cdb4"/><path d="M179 118h100v45c0 38-100 38-100 0z" fill="#f6edd8"/><ellipse cx="229" cy="118" rx="50" ry="15" fill="#d4bea0"/><ellipse cx="229" cy="118" rx="43" ry="11" fill="#76513c"/><path d="M279 127h10c36 0 27 40-10 35" stroke="#f6edd8" stroke-width="12" fill="none"/><path d="M214 89c-18-20 17-24 0-43m26 43c-18-20 17-24 0-43" stroke="#f6edd8" stroke-width="3" fill="none" opacity=".8"/><path d="m52 205 48-31 67 64-48 30z" fill="#e4d8bb"/><path d="m67 208 32-20 47 46-30 18z" fill="#c79968"/><path d="m76 208 22-12 35 34-18 13z" fill="#dbb785"/><path d="m329 196-8 62" stroke="#87745b" stroke-width="5"/><ellipse cx="331" cy="185" rx="8" ry="15" fill="#a18e73"/></svg><span class="image-tag">A TASTE OF EVERYDAY</span></div><div class="post-copy"><div class="post-meta"><span class="category-tag">美食散步</span><span>規劃中</span></div><h3>好好吃飯，<br>也是認識生活的方式。</h3><p>想記下的不只是味道，還有一間店、一條街帶來的感受。</p><div class="post-footer"><span>餐桌邊的觀察</span><span aria-hidden="true">↗</span></div></div></button></article>
+        </div>
+        <div class="empty-state" hidden><span aria-hidden="true">✳</span><h3>這一頁，還留著空白。</h3><p>換個關鍵字或主題看看，筆記會慢慢累積。</p><button id="clear-filters">查看所有筆記 ↗</button></div>
+        <p class="planning-note"><span aria-hidden="true">✎</span> 這是筆記的起點。上方題目正在規劃中，點擊卡片可看看寫作方向。</p><span class="sr-only" id="results-status" aria-live="polite"></span>
+      </section>
+      <section class="about-section" id="about"><div class="about-symbol" aria-hidden="true">e<span>✳</span></div><div class="about-copy"><span class="eyebrow">THE PERSON BEHIND THE NOTES</span><h2>嗨，我是 Edsno W<span>.</span></h2><p>喜歡弄懂事物怎麼運作，也喜歡走走看看，尋找好吃的東西。<br>這裡記錄我的技術學習、旅行見聞，以及值得停下來想一想的小事。</p><a href="https://github.com/EdweiDev" target="_blank" rel="noopener noreferrer">在 GitHub 找到我 ↗</a></div></section>
+      <footer><span class="footer-note">技術是探索，生活也是。</span><span>© <span class="year">2026</span> Edsno W.</span><a href="#main">回到頂端 ↑</a></footer>
+    </div>
+  </main>
+  <dialog id="article-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="關閉文章規劃">×</button><span class="eyebrow">WORK IN PROGRESS / 文章規劃</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><h3>想一起探索的問題</h3><ul id="dialog-outline"></ul><p class="dialog-note">這篇還在醞釀中，正式文章完成後會放在這裡。</p><button class="dialog-done">繼續逛逛 ↗</button></dialog>
+</body>
+</html>

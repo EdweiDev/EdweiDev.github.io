@@ -15,8 +15,8 @@
       document.documentElement.dataset.theme = preference === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
     })();
   </script>
-  <link rel="stylesheet" href="style.css?v=2">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/script.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳至主要內容</a>
@@ -27,8 +27,8 @@
     <nav aria-label="主要導覽">
       <a class="nav-item selected" href="#main"><span aria-hidden="true">⌂</span>首頁<span class="nav-en">Home</span></a>
       <a class="nav-item" href="#journal" data-filter="全部"><span aria-hidden="true">▤</span>所有筆記<span class="count">03</span></a>
-      <details class="category"><summary><span aria-hidden="true">⌘</span>技術筆記<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><button data-filter="技術">全部技術筆記</button><button data-filter="網路基礎">網路與資料中心</button><button data-filter="工具應用">工具與實作</button></div></details>
-      <details class="category"><summary><span aria-hidden="true">♧</span>生活探索<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><button data-filter="旅行">旅行見聞</button><button data-filter="美食">美食散步</button></div></details>
+      <details class="category"><summary><span aria-hidden="true">⌘</span>技術筆記<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/tech/">全部技術筆記</a><button data-filter="網路基礎">網路與資料中心</button><button data-filter="工具應用">工具與實作</button></div></details>
+      <details class="category"><summary><span aria-hidden="true">♧</span>生活探索<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/travel/">旅行見聞</a><a href="/blog/foodie/">美食散步</a></div></details>
       <button class="nav-item" data-filter="隨筆"><span aria-hidden="true">✎</span>隨筆<span class="nav-en">Thoughts</span></button>
       <a class="nav-item" href="#about"><span aria-hidden="true">☺</span>關於 Edsno W.</a>
     </nav>

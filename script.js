@@ -61,6 +61,8 @@
   const search = document.querySelector('#search');
   const posts = [...document.querySelectorAll('.post')];
   const chips = [...document.querySelectorAll('.filter-chips button')];
+  const pageCategory = document.body.dataset.category;
+  const categoryPaths = { '技術': '/blog/tech/', '網路基礎': '/blog/tech/?topic=網路基礎', '工具應用': '/blog/tech/?topic=工具應用', '旅行': '/blog/travel/', '美食': '/blog/foodie/' };
   function filterPosts() {
     const query = search.value.trim().toLocaleLowerCase();
     const category = select.value;
@@ -80,6 +82,14 @@
     document.querySelector('.journal-number').textContent = count ? `01 — ${String(count).padStart(2, '0')}` : '00 — 00';
   }
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+    if (pageCategory && button.closest('.sidebar')) {
+      const target = button.dataset.filter;
+      const inPage = target === pageCategory || (pageCategory === '技術' && ['網路基礎', '工具應用'].includes(target));
+      if (!inPage) {
+        location.href = categoryPaths[target] || `/?topic=${encodeURIComponent(target)}#journal`;
+        return;
+      }
+    }
     select.value = button.dataset.filter;
     filterPosts();
     if (button.closest('.sidebar')) {
@@ -91,6 +101,9 @@
   select.addEventListener('change', filterPosts);
   search.addEventListener('input', filterPosts);
   document.querySelector('#clear-filters').addEventListener('click', () => { select.value = '全部'; search.value = ''; filterPosts(); search.focus(); });
+  const requestedTopic = new URLSearchParams(location.search).get('topic');
+  if (requestedTopic && [...select.options].some(option => option.value === requestedTopic)) select.value = requestedTopic;
+  filterPosts();
 
   const articles = {
     network: { title:'AI 伺服器背後，為什麼有這麼多線？', description:'《你看不見的網路》系列的第一個題目，寫給剛接觸伺服器與資料中心、想把設備與連線串起來的人。', outline:['GPU 負責運算，為什麼還需要網路？','NIC、交換器、線材與光模組各自做什麼？','兩台伺服器之間，一筆資料大致如何傳遞？'] },

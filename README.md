@@ -10,6 +10,11 @@
 - `style.css`：米色／深色外觀，以及桌面和手機排版。
 - `script.js`：外觀設定、搜尋、分類篩選、側欄與文章規劃視窗。
 - `.nojekyll`：以一般靜態檔案發布，不使用 Jekyll 建置。
+- `blog/foodie/index.html`：美食分類頁（`/blog/foodie/`）。
+- `blog/travel/index.html`：旅行分類頁（`/blog/travel/`）。
+- `blog/tech/index.html`：技術分類頁（`/blog/tech/`）。
+
+分類頁共用根目錄的 CSS 與 JavaScript。未來單篇文章可放在對應分類資料夾，例如 `blog/travel/tokyo/index.html`，網址就是 `/blog/travel/tokyo/`。新增文章後需手動更新首頁及分類頁的文章列表。
 
 目前三張卡片均為文章規劃，並非已發布文章。卡片插圖以 SVG 製作並包含在 HTML 中。字型透過 Google Fonts 載入；無法連線時會使用系統備用字型。
 

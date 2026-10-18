@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="從網路與資料中心，到工具與實作。記錄問題，也記錄理解的過程。">
+  <meta name="color-scheme" content="light dark">
+  <title>技術筆記 — Edsno W. 的觀察筆記</title>
+  <script>
+    (() => {
+      let preference = 'auto';
+      try { preference = localStorage.getItem('edwei-theme') || 'auto'; } catch {}
+      if (!['auto','light','dark'].includes(preference)) preference = 'auto';
+      document.documentElement.dataset.preference = preference;
+      document.documentElement.dataset.theme = preference === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/script.js?v=3" defer></script>
+</head>
+<body data-category="技術">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <button class="sidebar-toggle" aria-controls="sidebar" aria-expanded="true" aria-label="收合側邊欄"><span aria-hidden="true">‹</span></button>
+  <aside id="sidebar" class="sidebar" aria-label="網站導覽">
+    <a class="brand" href="/"><span class="brand-name">Edsno W<span>.</span></span><span class="brand-caption">探索日常，記錄所見</span></a>
+    <span class="sidebar-label">MY LITTLE CORNER</span>
+    <nav aria-label="主要導覽">
+      <a class="nav-item" href="/"><span aria-hidden="true">⌂</span>首頁<span class="nav-en">Home</span></a>
+      <a class="nav-item" href="/#journal"><span aria-hidden="true">▤</span>所有筆記<span class="count">03</span></a>
+      <details class="category" open><summary><span aria-hidden="true">⌘</span>技術筆記<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/tech/" aria-current="page">全部技術筆記</a><button data-filter="網路基礎">網路與資料中心</button><button data-filter="工具應用">工具與實作</button></div></details>
+      <details class="category"><summary><span aria-hidden="true">♧</span>生活探索<span class="chevron" aria-hidden="true">⌄</span></summary><div class="subnav"><a href="/blog/travel/">旅行見聞</a><a href="/blog/foodie/">美食散步</a></div></details>
+      <button class="nav-item" data-filter="隨筆"><span aria-hidden="true">✎</span>隨筆<span class="nav-en">Thoughts</span></button>
+      <a class="nav-item" href="/#about"><span aria-hidden="true">☺</span>關於 Edsno W.</a>
+    </nav>
+    <section class="sidebar-note"><span class="sidebar-label">ON MY MIND</span><span class="note-mark" aria-hidden="true">✳</span><p>不用急著抵達，<br>沿途也值得記錄。</p><span class="note-caption">a note to myself</span></section>
+    <div class="sidebar-bottom"><a class="github-link" href="https://github.com/EdweiDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><div class="theme-row"><span id="theme-caption">外觀模式</span><div class="theme-switch" role="group" aria-labelledby="theme-caption"><button data-theme-choice="light" aria-label="淺色模式" title="淺色模式" aria-pressed="false">☀</button><button data-theme-choice="auto" aria-label="跟隨系統" title="跟隨系統" aria-pressed="true">◐</button><button data-theme-choice="dark" aria-label="深色模式" title="深色模式" aria-pressed="false">☾</button></div></div><span class="sidebar-copyright">© <span class="year">2026</span> Edsno W. · Made with curiosity</span></div>
+  </aside>
+  <button class="sidebar-backdrop" aria-label="關閉導覽選單" hidden></button>
+
+  <main id="main">
+    <div class="main-inner">
+      <div class="topline"><span>TECHNOLOGY & EXPLORATION</span><span class="topline-right"><span class="status-dot"></span> 持續探索中</span></div>
+      <section class="hero" aria-labelledby="hero-title"><span class="hero-pill"><span aria-hidden="true">✳</span> Edsno W. 的技術筆記</span><h1 id="hero-title">從無知到認知，<br>把<span class="serif-accent">技術</span>慢慢弄懂。</h1><p>從網路與資料中心，到工具與實作。記錄問題，也記錄理解的過程。</p><a href="#journal" class="hero-link">一起翻翻筆記 <span aria-hidden="true">↓</span></a><span class="hero-scribble" aria-hidden="true">stay curious.</span></section>
+      <section id="journal" aria-labelledby="journal-title">
+        <div class="journal-heading"><div><span class="eyebrow">THE NOTEBOOK</span><h2 id="journal-title" tabindex="-1">技術筆記<span>從這裡開始</span></h2></div><span class="journal-number">01 — 01</span></div>
+        <div class="tools"><div class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="search">搜尋筆記</label><input id="search" type="search" placeholder="找找你感興趣的事物…" autocomplete="off"></div><label class="sr-only" for="category-filter">篩選筆記分類</label><select id="category-filter"><option value="全部">技術筆記・全部</option><option value="網路基礎">網路與資料中心</option><option value="工具應用">工具與實作</option></select></div>
+        <div class="category-breadcrumb"><a href="/">首頁</a><span aria-hidden="true">/</span><span>技術筆記</span><a href="/#journal">查看所有主題 ↗</a></div>
+        <div class="post-grid">
+          <article class="post" data-categories="技術 網路基礎"><button class="post-open" data-article="network" aria-label="查看規劃：AI 伺服器背後，為什麼有這麼多線？"><div class="post-image scene-desk"><svg viewBox="0 0 420 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#d9cdb6"/><stop offset="1" stop-color="#f0e6d1"/></linearGradient></defs><path fill="url(#wall)" d="M0 0h420v290H0z"/><path d="M275 0h145v185L260 118z" fill="#fff7d9" opacity=".6"/><path d="M0 213h420v77H0z" fill="#ac8563"/><path d="M0 213h420v10H0z" fill="#c5a17b"/><rect x="83" y="79" width="172" height="115" rx="6" fill="#5d6454"/><rect x="91" y="87" width="156" height="97" rx="2" fill="#c2c9b0"/><path d="M162 195v19m-27 1h64" stroke="#5d6454" stroke-width="7"/><g stroke="#768764" stroke-width="2" fill="#dce0c9"><path d="M120 117h93m-47 0v36m-46 0h93"/><rect x="109" y="106" width="24" height="23" rx="3"/><rect x="201" y="106" width="24" height="23" rx="3"/><rect x="155" y="142" width="24" height="23" rx="3"/></g><path d="M106 232h164l-16 15H92z" fill="#dfd3b8"/><path d="M303 214v-70m-19 0h38l12 22h-63z" fill="#a36b4e" stroke="#a36b4e" stroke-width="4"/><ellipse cx="302" cy="215" rx="25" ry="4" fill="#8c654b"/><path d="M337 235h30v22h-30z" fill="#e4d9c1"/><path d="M367 239q17-1 9 10h-9" fill="none" stroke="#e4d9c1" stroke-width="4"/><path d="M22 212v-32m-3 10c-24-30 12-38 5-4m0-12c3-34 26-25 7-2" stroke="#718163" stroke-width="5" fill="none"/><path d="M8 200h31l-5 18H13z" fill="#b66e4b"/></svg><span class="image-tag">THE INVISIBLE NETWORK</span></div><div class="post-copy"><div class="post-meta"><span class="category-tag">技術筆記</span><span>規劃中</span></div><h3>AI 伺服器背後，<br>為什麼有這麼多線？</h3><p>從 NIC、交換器到線材，一起拆解你看不見的網路。</p><div class="post-footer"><span>你看不見的網路 / 01</span><span aria-hidden="true">↗</span></div></div></button></article>
+          
+          
+        </div>
+        <div class="empty-state" hidden><span aria-hidden="true">✳</span><h3>這一頁，還留著空白。</h3><p>換個關鍵字或主題看看，筆記會慢慢累積。</p><button id="clear-filters">查看所有筆記 ↗</button></div>
+        <p class="planning-note"><span aria-hidden="true">✎</span> 這是筆記的起點。上方題目正在規劃中，點擊卡片可看看寫作方向。</p><span class="sr-only" id="results-status" aria-live="polite"></span>
+      </section>
+      <section class="about-section" id="about"><div class="about-symbol" aria-hidden="true">e<span>✳</span></div><div class="about-copy"><span class="eyebrow">THE PERSON BEHIND THE NOTES</span><h2>嗨，我是 Edsno W<span>.</span></h2><p>喜歡弄懂事物怎麼運作，也喜歡走走看看，尋找好吃的東西。<br>這裡記錄我的技術學習、旅行見聞，以及值得停下來想一想的小事。</p><a href="https://github.com/EdweiDev" target="_blank" rel="noopener noreferrer">在 GitHub 找到我 ↗</a></div></section>
+      <footer><span class="footer-note">技術是探索，生活也是。</span><span>© <span class="year">2026</span> Edsno W.</span><a href="#main">回到頂端 ↑</a></footer>
+    </div>
+  </main>
+  <dialog id="article-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="關閉文章規劃">×</button><span class="eyebrow">WORK IN PROGRESS / 文章規劃</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><h3>想一起探索的問題</h3><ul id="dialog-outline"></ul><p class="dialog-note">這篇還在醞釀中，正式文章完成後會放在這裡。</p><button class="dialog-done">繼續逛逛 ↗</button></dialog>
+</body>
+</html>
