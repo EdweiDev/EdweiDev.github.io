@@ -1,0 +1,16 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local dependencies, logs and private environment settings
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+
+# Local previews and unpublished notes
+_preview-*.html
+private-notes/
