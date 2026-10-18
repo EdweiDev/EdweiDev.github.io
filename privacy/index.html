@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>隱私說明 — Edson W. 的觀察筆記</title>
+  <meta name="description" content="Edson W. 的觀察筆記使用 Google Analytics 4 了解網站閱讀情況。了解資料用途與瀏覽器設定。">
+  <script>
+    (() => {
+      let preference = 'auto';
+      try { preference = localStorage.getItem('edwei-theme') || 'auto'; } catch {}
+      document.documentElement.dataset.theme = ['light','dark'].includes(preference) ? preference : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/analytics.js?v=1" defer></script>
+  <style>
+    .privacy-main{margin:0 auto;max-width:760px;padding:45px 28px 65px}.privacy-main h1{font-size:34px;margin:30px 0 20px}.privacy-main h2{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:500;margin:32px 0 12px}.privacy-main p,.privacy-main li{font-size:15px;line-height:2;color:var(--muted)}.privacy-main p{margin:12px 0}.privacy-main a{text-decoration:underline;text-underline-offset:4px;color:var(--accent)}.privacy-main .privacy-date{font-size:11px}.privacy-main footer{margin-top:40px}
+  </style>
+</head>
+<body>
+  <main class="privacy-main">
+    <a href="/">← 回到 Edson W. 的觀察筆記</a>
+    <h1>隱私說明</h1>
+    <p class="privacy-date">更新日期：2026 年 10 月 18 日</p>
+    <p>這裡是一個分享技術、旅行、美食與日常的個人部落格。網站使用 Google Analytics 4（GA4）了解閱讀情況，作為改善內容與版面的參考。</p>
+    <h2>網站流量統計</h2>
+    <p>GA4 可能收集你瀏覽的頁面、閱讀互動、來源網站，以及裝置、瀏覽器與概略地區等資訊，並可能使用 Cookie 區分不同瀏覽器或造訪。資料會傳送至 Google 處理。</p>
+    <p>本站不主動向 GA4 提供你的姓名、電子郵件或會員帳號，也未啟用 Google signals 與廣告個人化訊號。初始瀏覽事件的頁面網址與來源網址會移除查詢字串及錨點；GA4 的加強型評估另可能收集連結等互動資訊。</p>
+    <p>統計報表不顯示在網站上，由網站管理者透過具權限的 Google Analytics 帳戶查看。詳情可參閱 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a>及 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google 如何使用合作網站的資料</a>。</p>
+    <h2>你的瀏覽器選擇</h2>
+    <p>本站偵測到瀏覽器的 Do Not Track 或 Global Privacy Control 訊號時，不會載入本站的 GA4 統計程式。你也可以透過瀏覽器或阻擋工具限制追蹤，或使用 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics 停用外掛程式</a>；支援情況依瀏覽器而異。</p>
+    <h2>網站外觀與其他服務</h2>
+    <p>深淺色選擇會保存在你瀏覽器的本機儲存空間中，不會由本站另建伺服器保存。網站由 GitHub Pages 託管，字型由 Google Fonts 提供；這些服務可能依各自政策處理必要的連線資訊。</p>
+    <footer><span>Edson W. 的觀察筆記</span><a href="/">回到首頁 ↗</a></footer>
+  </main>
+</body>
+</html>

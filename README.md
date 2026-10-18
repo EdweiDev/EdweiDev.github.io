@@ -29,3 +29,9 @@
 此儲存庫公開。請只加入準備公開的檔案；私人草稿、工作資料與金鑰不應加入版本紀錄。`.gitignore` 不會移除先前已提交的檔案或歷史紀錄。
 
 序章文章位於 `blog/tech/invisible-network/prologue/index.html`，文章排版使用共用的 `article.css`。
+
+## 流量統計
+
+所有公開頁面透過 `analytics.js` 連接 GA4 資源 `G-S80PVVEQZD`，只在 `edweidev.github.io` 網域執行。本機預覽不載入 Google 統計程式。網站不顯示計數器，報表需登入具權限的 Google Analytics 帳戶查看；衡量 ID 本身不是密碼，也不授予報表存取權。
+
+本站關閉 Google signals 與廣告個人化訊號，初始頁面及來源網址不傳送查詢字串或錨點；加強型評估依 GA4 資源設定運作。Do Not Track 或 Global Privacy Control 訊號啟用時不載入統計。相關說明位於 `/privacy/`。
